@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add BookUI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Nunito';
+            background: black;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .install_bookui {
+            background: dodgerblue;
+            color: white;
+            font-family: 'Nunito';
+            text-decoration: none;
+
+            padding: 25px;
+            margin-bottom: 67px;
+
+            border-radius: 12px;
+        }
+
+        .title {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="title">Add BookUI</h1>
+
+    <a
+        class="install_bookui"
+        id="installBookUI"
+        href="#"
+    >
+        Drag me to your Bookmarks Bar
+    </a>
+
+    <script>
+        fetch('https://raw.githubusercontent.com/Jamesy-tech/BookUI/refs/heads/main/bookmarklet-code.js')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch bookmarklet');
+                }
+
+                return response.text();
+            })
+            .then(code => {
+                document.getElementById('installBookUI').href = code.trim();
+            })
+            .catch(error => {
+                console.error('Failed to load BookUI:', error);
+            });
+    </script>
+
+</body>
+</html>
