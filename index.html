@@ -7,7 +7,7 @@
 
     <title>Add BookUI</title>
 
-    <link rel="icon" href="AddBookUI.png">
+    <link rel="icon" href="icon3.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +35,10 @@
             text-decoration: none;
 
             padding: 25px;
+            width:250px;
+            text-align:center;
+            margin:8px;
+            font-size:20px;
             margin-bottom: 67px;
 
             border-radius: 12px;
@@ -42,20 +46,34 @@
 
         .title {
             color: white;
+            font-size:36px;
+            padding:0px;
+            display:block;
         }
+
+        .desc {
+            color:white;
+            font-size:18px;
+            padding:10px;
+            padding-bottom:10px;
+            display:block;
+        }
+
     </style>
 </head>
 
 <body>
 
-    <h1 class="title">Add BookUI</h1>
+    <span class="title">Add BookUI</span>
+
+    <span class="desc">Drag to your bookmarks bar</span>
 
     <a
         class="install_bookui"
         id="installBookUI"
         href="#"
     >
-        Drag me to your Bookmarks Bar
+        BookUI
     </a>
 
     <script>
